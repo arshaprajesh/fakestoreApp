@@ -60,7 +60,6 @@ JavaScript / JSX
 
 <img width="232" height="219" alt="image" src="https://github.com/user-attachments/assets/6bc46a25-861d-4124-b2db-be466d077257" />
 
-
 🚀 Getting Started
 1. Clone the repository
 git clone <your-repo-url>
