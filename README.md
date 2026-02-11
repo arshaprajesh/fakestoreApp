@@ -57,18 +57,9 @@ FakeStore API (https://fakestoreapi.com)
 JavaScript / JSX
 
 📂 Project Structure
-Code
-src/
-│── components/
-│   ├── NavigationBar.jsx
-│   ├── Home.jsx
-│   ├── ProductList.jsx
-│   ├── ProductDetails.jsx
-│   ├── AddProducts.jsx
-│   ├── EditProduct.jsx
-│── App.jsx
-│── App.css
-│── main.jsx
+
+<img width="232" height="219" alt="image" src="https://github.com/user-attachments/assets/6bc46a25-861d-4124-b2db-be466d077257" />
+
 
 🚀 Getting Started
 1. Clone the repository
