@@ -2,7 +2,7 @@
 
 A responsive e‑commerce frontend built with React, React‑Bootstrap, and the FakeStore API, featuring product listing, product details, add/update/delete workflows, and a clean UI with carousel banners.
 
-erDiagram
+ERDiagram
 
     Category {
         string name PK
