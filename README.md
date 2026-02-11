@@ -2,26 +2,42 @@
 
 A responsive e‑commerce frontend built with React, React‑Bootstrap, and the FakeStore API, featuring product listing, product details, add/update/delete workflows, and a clean UI with carousel banners.
 
-+------------------+          1        M         +------------------+
-|    Category      |-----------------------------|     Product      |
-+------------------+                               +------------------+
-| name (string)    |                               | id (PK)          |
-+------------------+                               | title            |
-                                                   | price            |
-                                                   | description      |
-                                                   | category (FK)    |
-                                                   | image            |
-                                                   +------------------+
-                                                             |
-                                                             | 1
-                                                             | 
-                                                             | M
-                                                   +------------------+
-                                                   |     Rating       |
-                                                   +------------------+
-                                                   | rate (float)     |
-                                                   | count (int)      |
-                                                   +------------------+
+erDiagram
+
+    Category {
+        string name PK
+    }
+
+    Product {
+        int id PK
+        string title
+        float price
+        string description
+        string category FK
+        string image
+    }
+
+    Rating {
+        float rate
+        int count
+    }
+
+    Category ||--o{ Product : "contains"
+    Product ||--|| Rating : "has"
+
+Relationship Summary
+Category → Product: One‑to‑Many
+A category contains many products
+
+Product → Rating: One‑to‑One
+Each product has a single rating object
+
+Product contains all core fields used in your React components:
+title
+description
+price
+category
+image
 
 ✨ Features
 Browse all products with a responsive grid layout
