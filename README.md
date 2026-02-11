@@ -1,12 +1,100 @@
-# React + Vite
+🛍️ FakeStore React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e‑commerce frontend built with React, React‑Bootstrap, and the FakeStore API, featuring product listing, product details, add/update/delete workflows, and a clean UI with carousel banners.
 
-Currently, two official plugins are available:
++------------------+          1        M         +------------------+
+|    Category      |-----------------------------|     Product      |
++------------------+                               +------------------+
+| name (string)    |                               | id (PK)          |
++------------------+                               | title            |
+                                                   | price            |
+                                                   | description      |
+                                                   | category (FK)    |
+                                                   | image            |
+                                                   +------------------+
+                                                             |
+                                                             | 1
+                                                             | 
+                                                             | M
+                                                   +------------------+
+                                                   |     Rating       |
+                                                   +------------------+
+                                                   | rate (float)     |
+                                                   | count (int)      |
+                                                   +------------------+
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
+Browse all products with a responsive grid layout
+View detailed product information with images, pricing, and category
+Add new products using a controlled form
+Update existing products with pre‑filled form fields
+Delete products with confirmation modal
+Navigation bar with routing to all pages
+Carousel banner on the home page
+Error handling, loading states, and success alerts
 
-## Expanding the ESLint configuration
+🛠️ Tech Stack
+React (Hooks, Router)
+React‑Bootstrap (UI components)
+Axios (API calls)
+FakeStore API (https://fakestoreapi.com)
+JavaScript / JSX
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📂 Project Structure
+Code
+src/
+│── components/
+│   ├── NavigationBar.jsx
+│   ├── Home.jsx
+│   ├── ProductList.jsx
+│   ├── ProductDetails.jsx
+│   ├── AddProducts.jsx
+│   ├── EditProduct.jsx
+│── App.jsx
+│── App.css
+│── main.jsx
+
+🚀 Getting Started
+1. Clone the repository
+git clone <your-repo-url>
+cd fakestore-react-app
+
+2. Install dependencies
+npm install
+
+3. Start the development server
+npm run dev
+Your app will be available at:
+http://localhost:5173/
+
+🔗 API Used
+This project uses the public FakeStore API:
+
+
+GET    https://fakestoreapi.com/products
+GET    https://fakestoreapi.com/products/:id
+POST   https://fakestoreapi.com/products
+PUT    https://fakestoreapi.com/products/:id
+DELETE https://fakestoreapi.com/products/:id
+
+📸 Screens & Components
+Home Page
+Carousel banner
+Special offer section
+
+Product List
+Fetches all products
+Displays cards with images, titles, and prices
+
+Product Details
+Shows full product info
+Add to cart counter
+Update & Delete actions
+
+Add Product
+Controlled form
+Success & error alerts
+
+Edit Product
+Pre‑filled form
+Updates product via PUT request
